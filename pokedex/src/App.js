@@ -4,20 +4,20 @@ import "./App.css";
 import Home from './components/Homepage';
 import Header from "./components/Header";
 import PokemonDetail from './components/pokemon_details';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <Header/>
         <Routes>
           <Route path ="about" element={<About />} exact />
           <Route path="/detail/:id" element={<PokemonDetail/>}/>
           <Route path="*" element={<Home />} exact />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
